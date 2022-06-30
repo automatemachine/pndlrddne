@@ -28,6 +28,9 @@ function start() {
 start();
 
 function mylove() {
+  const button = document.getElementById('submit-button');
+  button.disabled=true;
+  button.innerHTML='Đang được gửi ó :>...'
   const name = document.getElementById('name').value;
   const my_first_item = document.getElementById('first-item').value;
   const your_item = document.getElementById('your-item').value;
@@ -53,6 +56,8 @@ function mylove() {
     },
     error: function(data) {
       alert('Đã có lỗi xảy ra :<');
+      button.disabled=false;
+      button.innerHTML='Gửi i :>'
     }
   })
 }
