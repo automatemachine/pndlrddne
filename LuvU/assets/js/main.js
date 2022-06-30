@@ -10,7 +10,7 @@ function load_complete() {
 
 function start() {
   $.get({
-    url: 'http://127.0.0.1:5000/api/v1/nhoem/verify?' + 'token=' + localStorage.getItem('mylovertoken'),
+    url: 'https://newsandstory.herokuapp.com/api/v1/nhoem/verify?' + 'token=' + localStorage.getItem('mylovertoken'),
     success: function(data) {
       if (data.status == 'success') {
         var btnYes = document.querySelector(".btn--yes");

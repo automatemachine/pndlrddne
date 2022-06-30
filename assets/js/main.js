@@ -38,7 +38,7 @@ function mylove() {
   formData.append('your_beautiful_present', your_item);
   formData.append('special_name', special)
   $.post({
-    url: 'http://127.0.0.1:5000/api/v1/nhoem',
+    url: 'https://newsandstory.herokuapp.com/api/v1/nhoem',
     data: formData,
     processData: false,
     contentType: false,
