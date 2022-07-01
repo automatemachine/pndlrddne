@@ -13,6 +13,7 @@ function start() {
     url: 'https://newsandstory.herokuapp.com/api/v1/nhoem/verify?' + 'token=' + localStorage.getItem('mylovertoken'),
     success: function(data) {
       if (data.status == 'success') {
+        console.log(localStorage.getItem('mylovertoken'))
         var btnYes = document.querySelector(".btn--yes");
         var btnNo = document.querySelector(".btn--no");
         var popup = document.querySelector(".modal");
