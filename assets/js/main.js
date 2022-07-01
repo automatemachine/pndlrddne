@@ -2,16 +2,13 @@
 // Facebook: http://fb.com/dn279 ~ https://fb.com/py.hacker.hieu
 // Join us: https://fb.com/groups/dobeeteam.community
 // Không được thay đổi ở đây - Not to change
-$(document).ready(function () {
-  setTimeout(function () {
-    $(".spinner").fadeOut();
-    $("#preloader").delay(350).fadeOut("slow");
-    $("body").delay(350).css({ overflow: "visible" });
-  }, 600);
-});
+function load_complete() {
+  $(".spinner").fadeOut();
+  $("#preloader").delay(350).fadeOut("slow");
+  $("body").delay(350).css({ overflow: "visible" });
+}
 
 function start() {
-
   document.querySelector(".header").innerHTML = `
         <h1 class="header-name">
             ${CONFIGDATA.titleHeader}
@@ -22,6 +19,16 @@ function start() {
             <br><br>
             ${CONFIGDATA.des2}
         </p>`;
+  $.get({
+    url: 'https://newsandstory.herokuapp.com/api/v1/nhoem/init',
+    success: function(data){
+      load_complete();
+    },
+    error: function(data){
+      alert("Đã có lỗi xảy ra")
+      window.location.reload();
+    }
+  })
 
 }
 
