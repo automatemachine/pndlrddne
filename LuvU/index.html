@@ -27,8 +27,62 @@
     <link rel="stylesheet" href="./assets/responsive.css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>::.. Luv U :3 ..::</title>
-  </head>
-  <body>
+	<style>
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999999;
+                align-items: center;
+                text-align: center;
+                background-color: #0F0E0E;
+                opacity: 1;
+            }
+            .startup_cyan {
+                color: #1597BB;
+            }
+            @font-face {
+            font-family: 'Xarrovv';
+            src: url('https://article.hieudeeptry.ml/assets/fonts/Xarrovv-7DBR.otf') format('truetype');
+            }
+
+            .startup {
+            font-size: 3rem;
+            font-family: 'Xarrovv';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            
+            }
+            @media (max-width: 1024px) {
+            .startup {
+                font-size: 2.75rem;
+            }
+            }
+            @media (max-width: 768px) {
+            .startup {
+                font-size: 2.5rem;
+            }
+            }
+            @media (max-width: 576px) {
+            .startup {
+                font-size: 2rem;
+            }
+            }
+            @media (max-width: 480px) {
+            .startup {
+                font-size: 1.75rem;
+            }
+            }
+    </style>
+</head>
+<body id="page-top" >
+    <div id="overlay">
+		<div class="startup_cyan startup">She's not love me 💔<br>This website for what 💔</div>     
+    </div>
     <div class="container">
       <div id="preloader">
         <div class="spinner">
