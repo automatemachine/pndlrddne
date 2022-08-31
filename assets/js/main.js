@@ -20,7 +20,7 @@ function start() {
             ${CONFIGDATA.des2}
         </p>`;
   $.get({
-    url: 'https://newsandstory.herokuapp.com/api/v1/nhoem/init',
+    url: 'https://api.hieudeeptry.ml/api/v1/nhoem/init',
     success: function(data){
       load_complete();
     },
@@ -48,7 +48,7 @@ function mylove() {
   formData.append('your_beautiful_present', your_item);
   formData.append('special_name', special)
   $.post({
-    url: 'https://newsandstory.herokuapp.com/api/v1/nhoem',
+    url: 'https://api.hieudeeptry.ml/api/v1/nhoem',
     data: formData,
     processData: false,
     contentType: false,
